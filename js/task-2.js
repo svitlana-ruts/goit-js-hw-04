@@ -6,7 +6,22 @@
 У консоль будуть виведені результати її викликів.*/
 
 
+function calcAverageCalories(days) {
 
+  let totalCalories = 0;
+  let totalDays = 0;
+
+  for (const day of days) {
+    totalCalories += day.calories;
+    totalDays++;
+  }
+
+ if (days.length === 0) {
+    return 0;
+  }
+
+  return totalCalories / totalDays;
+}
 
 console.log(
   calcAverageCalories([
